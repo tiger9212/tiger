@@ -1,0 +1,7 @@
+<AppSetting>
+    <appId>wx2cc109f2d6113abb</appId>
+    <secret>6f05f0c92fccbbf19983ffd8120f33b0</secret>
+    <token>zhouyi</token>
+    <aesKey>lRE3qfnBHxqzBE5i12v6CzU257ERsOIeMKqfDPdFu5c</aesKey>
+    <tokenHolderClass>com.outab.tiger.web.wechat.RedisAccessTokenHolder</tokenHolderClass>
+</AppSetting>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.outab.tiger.jdbc.dao.UserInfoDao" >
+    <resultMap id="userInfoResultMap" type="com.outab.tiger.jdbc.UserInfo">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="code" property="code" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+    <insert id="addUser" parameterType="com.outab.tiger.jdbc.UserInfo">
+        INSERT INTO t_user_info
+        (
+          id,
+          code,
+          name,
+          mobile,
+          age,
+          password
+        )
+        VALUES (
+            #{id,jdbcType=BIGINT},
+            #{code,jdbcType=BIGINT},
+            #{name,jdbcType=VARCHAR},
+            #{mobile,jdbcType=VARCHAR},
+            #{age,jdbcType=INTEGER},
+            #{password,jdbcType=VARCHAR}
+        )
+    </insert>
+    <select id="selectUser" parameterType="com.outab.tiger.jdbc.UserInfo" resultMap="userInfoResultMap">
+        SELECT  * FROM t_user_info where code = 10001
+    </select>
+</mapper>
