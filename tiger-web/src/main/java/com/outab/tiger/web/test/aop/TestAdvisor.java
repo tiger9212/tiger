@@ -28,7 +28,7 @@ public class TestAdvisor {
     public void afterTest(){
         System.out.println("afterTest");
     }
-    @Around("test()")
+    @Around("test()&&@annotation(Deprecated)")
     public Object aroundTest(ProceedingJoinPoint p){
         System.out.println("before1");
         Object o = null;

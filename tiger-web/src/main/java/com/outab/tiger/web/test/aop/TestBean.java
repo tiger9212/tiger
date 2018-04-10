@@ -10,6 +10,7 @@ public class TestBean {
     public void doMethod(){
         System.out.println("doMethod");
     }
+    @Deprecated
     public void test(){
         System.out.println("test");
     }

@@ -1,4 +1,4 @@
 server:
-  port: 8001
+  port: 57505
   session:
     timeout: 30

@@ -13,10 +13,14 @@ import org.springframework.data.redis.core.StringRedisTemplate;
  */
 public class SpringDemoMain {
     public static void main(String[] args) throws InterruptedException {
-        DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
-        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
-        reader.loadBeanDefinitions(new ClassPathResource("spring/test-bean.xml"));
-        UserService userService = factory.getBean("userService",UserService.class);
-        userService.login(null);
+//        DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+//        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
+//        reader.loadBeanDefinitions(new ClassPathResource("spring/test-bean.xml"));
+//        UserService userService = factory.getBean("userService",UserService.class);
+//        userService.login(null);
+        Boolean s = null;
+        if(s){
+            System.out.println(1);
+        }
     }
 }

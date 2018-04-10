@@ -10,5 +10,6 @@ import io.shardingjdbc.core.api.HintManager;
 public class HintManagerStrategy {
     public void getManager(){
         HintManager manager = HintManager.getInstance();
+
     }
 }

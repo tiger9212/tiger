@@ -9,15 +9,16 @@
     <bean id="user_0" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://47.52.227.107:3306/user_0" />
-        <property name="username" value="root" />
-        <property name="password" value="nopassword" />
+        <property name="username" value="magic" />
+        <property name="password" value="zhouyi" />
     </bean>
     <bean id="user_1" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://47.52.227.107:3306/user_1" />
-        <property name="username" value="root" />
-        <property name="password" value="nopassword" />
+        <property name="username" value="magic" />
+        <property name="password" value="zhouyi" />
     </bean>
+
     <sharding:hint-strategy id="hintStrategy" algorithm-class=""/>
     <sharding:inline-strategy id="databaseStrategy" sharding-column="id" algorithm-expression="user_${id % 2}" />
     <sharding:inline-strategy id="userTableStrategy" sharding-column="id" algorithm-expression="t_user_info_${id % 4}" />

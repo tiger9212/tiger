@@ -24,7 +24,7 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     @ResponseBody
-    public String login() {
+    public String login(String wechatOpenId) {
         User user = new User();
         boolean isSuccess = userService.addUser(user);
         System.out.println(isSuccess);
@@ -46,14 +46,10 @@ public class UserController {
         return jsapi_ticket;
     }
 
-    @RequestMapping(value = "/getUserInfo",produces = "application/xml")
+    @RequestMapping(value = "/getUserInfo")
     @ResponseBody
-    public User getUserInfo() {
-        User user = new User();
-        user.setAge(12);
-        user.setCode(1001L);
-        user.setId(1234L);
-        user.setName("周易");
+    public User getUserInfo(User user) {
+        System.out.println(user);
         return user;
     }
 }
