@@ -1,11 +1,5 @@
 package com.outab.tiger.web.test.main;
 
-import com.outab.tiger.api.UserService;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.data.redis.core.StringRedisTemplate;
-
 /**
  * @Author: 周易(yi.zhou)
  * @Date: 2017/7/19 下午12:44

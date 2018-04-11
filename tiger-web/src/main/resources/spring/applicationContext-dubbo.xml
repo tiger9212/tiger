@@ -7,7 +7,7 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:registry address="zookeeper://zk.outab.com:2181"/>
     <dubbo:application name="tiger-web"/>
     <dubbo:reference id="userService" interface="com.outab.tiger.api.UserService" check="false"/>
 
